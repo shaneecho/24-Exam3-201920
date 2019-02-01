@@ -126,7 +126,7 @@ def problem1(n):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # **** IMPORTANT ****:
     # We supplied a   fibonacci   function above.
@@ -139,6 +139,15 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
+    fib = [0,1,1]
+    index = 2
+    while True:
+        if fib[index]>= n:
+            break
+        else:
+            fib = fib + [fib[index]+fib[index-1]]
+            index = index + 1
+    return fib[index-1]
 
 
 ###############################################################################
